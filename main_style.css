@@ -1,0 +1,219 @@
+html,body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: URW Chancery L, cursive;
+    background-image: url('city.jpg');
+    font-size: 100%;
+}
+
+h1,h2,label, .UserName{
+    text-align: center;
+    color: #000066;
+}
+h1+h2, h2+p{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ol{
+    list-style-type: decimal;
+}
+#valueCount{
+    color: #000066;
+    font-size: 22px;
+    padding: 0 15px;
+}
+#svgBody{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+#field{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    z-index: 0;
+}
+.helicopter{
+    height: 7%;
+    width: auto;
+    position: absolute;
+}
+#main>h1{
+    
+    text-shadow: 2px 2px 4px #007fff;
+    letter-spacing: 2px;
+}
+#main{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; 
+    line-height: 40px;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+}
+#main>p:hover, #main>a:hover, input[type=text]:focus, input[type=text]:hover{
+    background-color: rgb(102 153 255);
+}
+#main>p, #main>a{
+    display: block;
+    width: 30%;
+    text-align: center;
+}
+#nav{
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width:40%;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+    border: 10px solid #007fff;
+    border-radius: 30px/20px;
+    background-color: rgba(0, 168, 255, 0.6);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.4);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.4);
+    height: auto; 
+    padding: 15px;
+    color: #000066;
+    font-size: 18px;
+    z-index: 20;
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+}
+#statistic{
+    display: none;
+    min-height: 200px;
+}
+#score{
+    z-index: 10;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    padding: 5px 0px;
+    background-color:rgba(0, 168, 255, 0.2)
+}
+#score span, #score svg{
+float: right;
+}
+input[type="text"] {
+    color: #000066;
+    font-size: 18px;
+    font-family: URW Chancery L, cursive;
+    font-weight: bold;
+    border: 0;
+    border-bottom: 1px solid #000066;
+    outline-style: none;
+    background-color:  rgba(0, 168, 255, 0);
+   }
+#UserName{
+    width: 30%;
+    
+    padding: 4px;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.settings{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+@media (max-width: 600px) {
+    #UserName , #main>p, #main>a{
+        width: 100%;
+    }
+    .settings{
+        flex-direction: column;
+    }
+    #play{
+        width: 30% !important; height:30% !important;
+    }
+}
+@media (max-height: 550px){
+    #nav{
+        top: 5%
+    }
+}
+label.userlabel{
+    display:block;
+}
+#myHelicopter{
+    width: 100%;
+    height: 100%;
+}
+
+#play{
+    border-radius: 50%;
+     margin: 10px ; 
+     -webkit-transition: -webkit-transform 1s; 
+     transition: -webkit-transform 1s; 
+     -o-transition: transform 1s; 
+     transition: transform 1s; 
+     transition: transform 1s, -webkit-transform 1s;
+     cursor: pointer;
+     width: 15%;
+     height: 15%;
+ }
+ #pause{
+    width:30px;
+    height: 30px;
+ }
+ #play:hover{
+     -webkit-transform: scale(1.2);
+         -ms-transform: scale(1.2);
+             transform: scale(1.2);
+ }
+ #star{
+     background: url('stars.png');
+     background-size: cover;
+     -webkit-animation: MyAnimation2 1s steps(5) infinite;
+             animation: MyAnimation2 1s steps(5) infinite;
+ }
+ @-webkit-keyframes MyAnimation2{
+     from { background: url('stars.png') 0 0; }
+     to { background: url('stars.png') -380px 0; } 
+ }
+ @keyframes MyAnimation2{
+     from { background: url('stars.png') 0 0; }
+     to { background: url('stars.png') -380px 0; } 
+ } 
+ #recordsTable
+ {
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: row;
+             flex-direction: row;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between; 
+ }
+ #rules{
+     display: none;
+     min-height: 200px;
+ }

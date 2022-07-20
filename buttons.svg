@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+
+  <style><![CDATA[
+    .sprite { display: none; }
+    .sprite:target { display: inline; }
+  ]]>
+  </style>
+
+</defs>
+
+<g class="sprite" id="pause">
+  <ellipse stroke-width="5" stroke="#007fff" ry="45" rx="45" id="svg_2" cy="50" cx="50" fill="#56aaff"/>
+  <rect id="svg_4" height="45" width="15.33333" y="28.33334" x="56.66667" stroke-width="4" stroke="#007fff" fill="#56aaff"/>
+  <rect id="svg_7" height="45" width="15.33333" y="28.16667" x="28.00001" stroke-width="4" stroke="#007fff" fill="#56aaff"/>
+</g>
+
+<g class="sprite" id="play">
+   <ellipse stroke-width="5" stroke="#007fff" ry="45" rx="45" id="svg_2" cy="50" cx="50" fill="#56aaff"/>
+  <path transform="rotate(89.2595 57.5339 49.7809)" stroke-width="5" stroke="#56aaff" id="svg_3" d="m28.36525,67.45187l29.16868,-35.34195l29.16868,35.34195l-58.33736,0z" fill="#007fff"/>
+</g>
+
+</svg>

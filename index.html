@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css" type="text/css">
+    <title>Helicopter</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="field">
+        <svg id="svgBody" xmlns='http://www.w3.org/2000/svg'>
+            <defs>
+                <pattern id='TRP1' width=20 height=10
+                    patternUnits=userSpaceOnUse>
+                    <rect x="0" y="0" width="20" height="10" stroke="#02014a" fill="#3e7cf7" rx="2" ry="2" />
+                </pattern>
+            </defs>
+        </svg>
+    </div>
+    <div id="helicopter" class="helicopter" style="transform: translateZ(0); will-change: transform">
+        <object id="myHelicopter" data="helicopter.svg" type="image/svg+xml" >
+        </object>
+    </div>
+    <div id="score">
+        <svg  id="progressParent" width=200 height=30 xmlns='http://www.w3.org/2000/svg'>
+            <rect id="progressStatus" x=1 y=2 width=198 height=25 rx=10 ry=10  fill="rgba(0, 168, 255, 0.6)" />
+            <rect  x=1 y=2 width=198 height=25 rx=10 ry=10   stroke='#000066' fill="rgba(0,0,0,0)" />
+        </svg>
+        <span id='valueCount' class="valueCount"> 0</span>
+        <img id="pause" src="buttons.svg#pause" alt="pause" title="pause" onclick="pauseOrStart()">
+    </div> 
+    <div id="nav">
+        <div id="main">
+            <h1>Helicopter</h1>
+            <h2 id="textGameOver" style="display: none;">Game over</h2>
+            <p id="result1" style="display: none;">Ваш результат: <span id='result'></span></p>
+            <a class="rules" href="#rules" onclick="logicGorRulesButton()">Rules</a>
+            <a class="statistic" href="#statistic" onclick="logicGorRecordsButton()">Records</a>
+            <input id="UserName" class="UserName" name="UserName" type="text" value="Player1">
+            <div class="settings">
+                <div class="music">
+                    <label for="music">Music&colon;</label>
+                    <input type='checkbox' class="checkbox" name='music' id="music" checked>
+                </div>
+                <div class="vibration">
+                    <label for="Vibration">Vibration&colon;</label>
+                    <input type='checkbox' class="checkbox" name='Vibration' id="Vibration" checked>
+                </div>
+            </div>
+            <img id="play" src="buttons.svg#play" onclick='startGame()' alt="Start" title="Start">
+        </div>
+        <div id="rules">
+            <a href="#menu" onclick="closeRules()">&times; Close</a>
+            <h2>Rules</h2>
+            <ol>
+                <li>Собери как можно больше звезд, чтобы вертолетик смог лететь дальше</li>
+                <li>Избегай соприкосновения с кирпичными блоками, иначе вертолетик потерпит крушение</li>
+                <li>Управляй вертолетиком с помощью нажатия клавиши вверх, либо левой клавиши мыши</li>
+            </ol>
+        </div>
+        <div id="statistic">
+            <a href="#menu" onclick="closeRecords()">&times; Close</a>
+            <div id="recordsTable">
+                <div id="numberColumn">
+                    <div>№</div>
+                </div>
+                <div id="nameColumn">
+                    <div>Name</div>
+                </div>
+                <div id="scoreColumn">
+                    <div>Score</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="rock.js"></script>
+    <script src="star.js"></script>
+    <script src="helicopterObject.js"></script>
+    <script src="records.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
